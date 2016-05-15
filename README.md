@@ -8,8 +8,17 @@ Supported devices:
 
 # Kindle 4th and 5th gen
 
+## Build toolchain
+
 ```
 ./build_k4.sh
+```
+
+## Compile kexec
+
+```
+source env_k4.sh
+./build_kexec.sh
 ```
 
 # Attribution
