@@ -20,14 +20,14 @@ mkdir -p crosstool-ng-workdir/
 cd crosstool-ng-workdir/
 # manually make clean
 rm -rf build.log config .config.2 .config.old config.gen .build/arm-kindle4-linux-gnueabi .build/src .build/tools
-cp ../ct-ng-kindle4.config .config
+cp ../fread-native-cross-compile/ct-ng-kindle4.config .config
 
 # CT_BUILD_OUTPUT decides where the compiled toolchain is installed
 export CT_BUILD_OUTPUT="$(pwd)/../toolchains"
 ct-ng oldconfig
 
 echo "=========================="
-echo "  Compiling crostool-ng!"
+echo "  Compiling crosstool-ng!"
 echo "=========================="
 echo ""
 ct-ng build
