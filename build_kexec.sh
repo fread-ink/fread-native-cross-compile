@@ -2,7 +2,7 @@
 
 if [[ ! -v TC_NAME ]]; then
   echo "Before building kexec run e.g:" >&2
-  echo "  source ./env_k4.sh" > &2
+  echo "  source ./env_k4.sh" >&2
   exit 1
 fi
 
@@ -11,7 +11,7 @@ KEXEC_FILE="${KEXEC_NAME}.tar.gz"
 
 set -e
 echo "Downloading kexec..."
-wget "https://www.kernel.org/pub/linux/utils/kernel/kexec/${KEXEC_FILE}
+wget "https://www.kernel.org/pub/linux/utils/kernel/kexec/${KEXEC_FILE}"
 tar xvzf $KEXEC_FILE
 OUT_DIR="${PWD}/kexec-out"
 cd $KEXEC_NAME
