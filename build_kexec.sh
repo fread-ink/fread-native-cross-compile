@@ -18,7 +18,7 @@ cd $KEXEC_NAME
 echo "Downloaded!"
 
 echo "Configuring kexec..."
-./configure --prefix=/home/vagrant/kexec-out --host=${TC_NAME}
+./configure --prefix=${OUT_DIR} --host=${TC_NAME}
 echo "Configured!"
 
 echo "Building kexec..."
