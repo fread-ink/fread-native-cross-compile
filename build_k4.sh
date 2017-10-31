@@ -29,7 +29,7 @@ export CT_BUILD_OUTPUT="$(pwd)/../toolchains"
 ct-ng oldconfig
 
 echo "=========================="
-echo "  Compiling crostool-ng!"
+echo "  Compiling crosstool-ng!"
 echo "=========================="
 echo ""
 ct-ng build
