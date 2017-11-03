@@ -10,12 +10,19 @@ KEXEC_NAME="kexec-tools-2.0.12"
 KEXEC_FILE="${KEXEC_NAME}.tar.gz"
 
 set -e
-echo "Downloading kexec..."
-wget "https://www.kernel.org/pub/linux/utils/kernel/kexec/${KEXEC_FILE}"
-tar xvzf $KEXEC_FILE
+
+if [ -f $KEXEC_FILE ]; then
+    echo "Downloading kexec..."
+    wget "https://www.kernel.org/pub/linux/utils/kernel/kexec/${KEXEC_FILE}"
+    echo "Downloaded!"
+else
+    echo "kexec already present..."
+fi
+
+tar xvzf $KEXEC_FILE    
+
 OUT_DIR="${PWD}/kexec-out"
 cd $KEXEC_NAME
-echo "Downloaded!"
 
 echo "Configuring kexec..."
 ./configure --prefix=${OUT_DIR} --host=${TC_NAME}
