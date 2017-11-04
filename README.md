@@ -25,6 +25,10 @@ ct-ng build
 
 and the build should complete correctly.
 
+## Pre-compiled kexec
+
+A pre-compiled version of kexec for kindle 4 is available in `bin/`.
+
 ## Compile kexec
 
 ```
