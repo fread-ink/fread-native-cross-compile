@@ -11,7 +11,7 @@ KEXEC_FILE="${KEXEC_NAME}.tar.gz"
 
 set -e
 
-if [ -f $KEXEC_FILE ]; then
+if [ ! -f $KEXEC_FILE ]; then
     echo "Downloading kexec..."
     wget "https://www.kernel.org/pub/linux/utils/kernel/kexec/${KEXEC_FILE}"
     echo "Downloaded!"
