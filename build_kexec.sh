@@ -6,7 +6,7 @@ if [[ ! -v TC_NAME ]]; then
   exit 1
 fi
 
-KEXEC_NAME="kexec-tools-2.0.12"
+KEXEC_NAME="kexec-tools-2.0.3"
 KEXEC_FILE="${KEXEC_NAME}.tar.gz"
 
 set -e
